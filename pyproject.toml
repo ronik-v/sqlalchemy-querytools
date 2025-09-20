@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "sqlalchemy-querytools"
+version = "0.0.1"
+description = "Helpers for searching, sorting and pagination for SQLAlchemy SELECT queries"
+authors = ["Vadim Andronik <andronnikovvv@gmail.com>"]
+readme = "README.md"
+packages = [{ include = "sqlalchemy_querytools", from = "src" }]
+
+[tool.poetry.dependencies]
+python = ">=3.12,<3.13"
+SQLAlchemy = ">=1.4,<2.2"
+typing-extensions = "^4.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.0"
+mypy = "^1.11"
+black = "^24.0"
+ruff = "^0.5"
+
+[build-system]
+requires = ["poetry-core>=1.8.0"]
+build-backend = "poetry.core.masonry.api"
