@@ -7,6 +7,14 @@ from .types import QueryToolType, TableFields
 
 
 class _QueryToolBuilderAbstract(ABC):
+    """
+
+    A base class for describing specific modifications to select queries with sqlalchemy.
+    QueryToolType - an enum for defining the query type in a specific implementation.
+    TableFields - a dictionary of the form string (database field name / JSON field)
+    -> ORM table field. *Sometimes you can insert sqlalchemy.text with the field name.
+    """
+
     def __init__(
         self,
         stmt: Select,

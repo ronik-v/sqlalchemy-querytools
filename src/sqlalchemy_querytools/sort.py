@@ -1,4 +1,8 @@
-from typing import override
+try:
+    from typing import override
+
+except ImportError:
+    from typing_extensions import override
 
 from sqlalchemy import Select, asc, desc, UnaryExpression
 from sqlalchemy.orm import InstrumentedAttribute
@@ -14,15 +18,22 @@ class SortQuery(_QueryToolBuilderAbstract):
         query_tool_type: SortType,
         table_fields_relation: TableFields,
         sort_field: str,
+        null_last: bool = False,
     ):
         super().__init__(stmt, query_tool_type, table_fields_relation)
 
         self._sort_field = sort_field
+        self._null_last = null_last
 
     @override
     def build(self) -> Select:
         """Assembling a query for sorting"""
-        ordered_field: UnaryExpression = self._use_extension()
+        ordered_field: UnaryExpression = (
+            self._use_extension().nullslast()
+            if self._null_last
+            else self._use_extension().nullsfirst()
+        )
+
         return self._stmt.order_by(ordered_field)
 
     @override
