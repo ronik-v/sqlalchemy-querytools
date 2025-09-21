@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Black">
-    <option name="sdkName" value="Poetry (osa)" />
+    <option name="enabledOnReformat" value="true" />
+    <option name="enabledOnSave" value="true" />
+    <option name="executionMode" value="BINARY" />
+    <option name="pathToExecutable" value="D:\GitHub\sqlalchemy-querytools\venv\Scripts\black.exe" />
+    <option name="sdkName" value="Python 3.13 (sqlalchemy-querytools)" />
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="Poetry (osa)" project-jdk-type="Python SDK" />
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.13 (sqlalchemy-querytools)" project-jdk-type="Python SDK" />
 </project>
