@@ -1,13 +1,13 @@
 [tool.poetry]
 name = "sqlalchemy-querytools"
-version = "0.0.1"
+version = "0.1.0"
 description = "Helpers for searching, sorting and pagination for SQLAlchemy SELECT queries"
 authors = ["Vadim Andronik <andronnikovvv@gmail.com>"]
 readme = "README.md"
 packages = [{ include = "sqlalchemy_querytools", from = "src" }]
 
 [tool.poetry.dependencies]
-python = ">=3.12,<4.0"
+python = ">=3.9,<4.0"
 SQLAlchemy = ">=1.4,<2.2"
 typing-extensions = "^4.0"
 
