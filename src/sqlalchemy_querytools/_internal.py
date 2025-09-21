@@ -1,4 +1,5 @@
 from abc import ABC, abstractmethod
+from typing import Any
 
 from sqlalchemy import Select
 
@@ -21,5 +22,5 @@ class _QueryToolBuilderAbstract(ABC):
         raise NotImplemented("build method is not realised")
 
     @abstractmethod
-    def _use_extension(self) -> Select:
+    def _use_extension(self) -> Any:
         raise NotImplemented("extension method is not realised")
