@@ -3,6 +3,8 @@ name = "sqlalchemy-querytools"
 version = "0.1.0"
 description = "Helpers for searching, sorting and pagination for SQLAlchemy SELECT queries"
 authors = ["Vadim Andronik <andronnikovvv@gmail.com>"]
+repository = "https://github.com/ronik-v/sqlalchemy-querytools"
+license = "MIT"
 readme = "README.md"
 packages = [{ include = "sqlalchemy_querytools", from = "src" }]
 
