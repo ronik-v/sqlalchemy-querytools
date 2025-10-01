@@ -5,4 +5,4 @@ from .types import SearchType, SortType
 
 
 __all__ = ["SearchQuery", "SortQuery", "PaginationQuery", "SearchType", "SortType"]
-__version__ = "0.1.0"
+__version__ = "0.1.2"

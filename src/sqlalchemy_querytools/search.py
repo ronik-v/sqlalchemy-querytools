@@ -68,7 +68,7 @@ class SearchQuery(_QueryToolBuilderAbstract):
                 date_value: date = datetime.fromisoformat(self._search_value).date()
                 date_fields: list[Cast[date]] = [
                     cast(_orm_field, Date)
-                    for _, _orm_field in self._table_fields_relation.keys()
+                    for _, _orm_field in self._table_fields_relation.items()
                     if isinstance(_orm_field.type, (DateTime, Date))
                 ]
 
